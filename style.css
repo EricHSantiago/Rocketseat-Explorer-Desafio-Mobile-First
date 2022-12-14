@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-body: #EFF1FF;
+  --bg-header: #8E9AAF;
+  --bg-header-2: #CBC0D3;
+  --bg-h2: #FEEAFA;
+
+
+  font-size: 62.5%;
+
+  --ff-heading: 'Staatliches', cursive;
+  --ff-texting: 'Palanquin', sans-serif;
+
+  --fs-heading-h1: 4rem;
+  --fs-body-h2: 2rem;
+
+  --fc-heading: #8E9AAF; 
+  --fc-texting: #23053A;
+}
+
+body {
+  font-family: var(--ff-texting);
+
+  background: var(--bg-body);
+  color: var(--fc-texting);
+}
+
+.page {
+  max-width: 38.4rem;
+  margin: 0 auto;
+  padding: 0 3.2rem 6rem;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-header);
+
+  padding-top: 3.2rem;
+  gap: 3.2rem;
+  height: 28rem;
+  min-width: 32rem;
+}
+
+header h1 {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-heading-h1);
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+  
+  text-align: center;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  color: #FFFFFF;
+  
+  width: 100%;
+  padding: 8px;
+  background: var(--bg-header-2);
+}
+
+main {
+  display: grid;
+  gap: 3.2rem;
+}
+
+main img {
+  width: 100%;
+  height: auto;
+
+  animation: dowtop 700ms ease-in-out;
+}
+
+main p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+
+  text-align: center;
+
+  margin: 1.4rem auto 0;
+}
+
+.card {
+  position: relative;
+
+  font-family: var(--ff-heading);
+}
+
+.card h2 {
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+
+  font-size: var(--fs-body-h2);
+  font-weight: 800;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
+
+  z-index: 1;
+}
+
+.card h2 span {
+  background-color: var(--bg-h2);
+  font-size: var(--fs-body-h2);
+  font-weight: 400;
+  color: var(--fc-secundary-dark);
+  width: fit-content;
+  height: 3.5rem;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 2rem;
+  padding: 0px 2.4rem;
+
+  animation: topdow 700ms ease-in-out;
+}
+
+/* Animações */
+
+@keyframes topdow {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes dowtop {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
